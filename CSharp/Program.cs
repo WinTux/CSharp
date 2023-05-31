@@ -16,6 +16,9 @@ namespace zona_principal
              * Autor: Pepe
              ***************************************
              */
+            #region Tipos de dato
+            int resultado =sumador(3, 67);
+            Console.WriteLine("La suma es: " + resultado);
             int ladoX = 2;
             int ladoY = 4;
             int radio = 5;
@@ -45,15 +48,20 @@ namespace zona_principal
             Console.WriteLine("¡Hola mundo!");
 
             string apellido = "Perales";
+            char letra = 'a';
 
             var nombre = "Pepe";
             var edad = 20;
             var w = 56.7;
 
+            bool casado = false; // true
+
             string numeroTexto = "25";
             edad = int.Parse(numeroTexto);
             Console.WriteLine(edad);
+            #endregion
 
+            #region Otros ejemplos
             //usando clases propias
             Circulo c;
             MatrizPerspectiva matriz1;
@@ -75,10 +83,36 @@ namespace zona_principal
             }
 
             Console.WriteLine("La división es: " + x);
+
+             resultado = sumador(2147483647, 1);
+            Console.WriteLine("La suma es: " + resultado);
+            #endregion
+
+            #region Arreglos
+            //unidimensional
+            int[] ropero = new int[4];
+            ropero[2] = 45;
+            ropero[0] = -12;
+            ropero[3] = 123;
+            ropero[1] = 9000;
+            //bidimensional
+            int[,] matrix = new int[4, 6]; // fila, columna
+            matrix[2, 4] = 40;
+            matrix[4, 2] = 31;
+
+            //multidimensionales
+            int[,,,,] arr = new int[3,5,6,7,2];
+            #endregion
+
         }
 
         public void metodito() {
             int x = 3 * var_global;
+        }
+        public static int sumador(int a, int b) {
+            Console.WriteLine("SUMA DE DOS NUMEROS");
+            int suma = a + b;
+            return suma;
         }
     }
 }
@@ -93,8 +127,24 @@ namespace otro
         Circulo circulo2;
         string nn;
         int y = 9;
-        public void met() { 
+        public void met(int nit) {
+            nit = nit + 3;
+        }
+        public void met(string num)
+        {
+            num = num + 3;
+        }
+        public void met(int ci, string x)
+        {
+            ci = ci + 3;
+        }
+        public void met(string x, int ci) {
+            registroEmpleado("Pepe","Perales");
+            registroEmpleado("Lopez", "Sofia");
             
+        }
+        public void registroEmpleado(string Nombre, string Apellido) { 
+            //bla bla bla
         }
     }
 }
