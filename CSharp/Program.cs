@@ -91,17 +91,62 @@ namespace zona_principal
             #region Arreglos
             //unidimensional
             int[] ropero = new int[4];
+            string[] argumentos = new string[0];
             ropero[2] = 45;
             ropero[0] = -12;
             ropero[3] = 123;
             ropero[1] = 9000;
+
+            int[] aux = new int[6];
+            aux[0] = ropero[0];
+            ropero = aux;
+
             //bidimensional
             int[,] matrix = new int[4, 6]; // fila, columna
             matrix[2, 4] = 40;
-            matrix[4, 2] = 31;
-
+            
             //multidimensionales
             int[,,,,] arr = new int[3,5,6,7,2];
+
+            Console.WriteLine("ropero en el indice 1: " + ropero[1]);
+            #endregion
+
+            #region SobreArgs
+            Console.WriteLine("args contiene esta cantidad de elementos: " + args.Length);
+            #endregion
+
+            #region bucles
+            //también iteradores, loops
+
+            //While: Cuando no sabemos cuantas veces iterar
+            Console.WriteLine("Ingrese un numero por favor:");
+            int eval = int.Parse(Console.ReadLine());
+            while (eval >= 1) {
+                Console.WriteLine("Estoy dentro del while " + eval);
+                eval--;
+            }
+            eval = 11;
+            Console.WriteLine("Ya acabó el while");
+
+            Console.WriteLine("eval ahora vale: " + eval);
+            Console.WriteLine("eval++ vale: " + eval++);
+            Console.WriteLine("eval ahora vale: " + eval);
+            Console.WriteLine("++eval vale: " + ++eval);
+            Console.WriteLine("eval ahora vale: " + eval);
+            int x1 = 4, x0 = 3;
+            Console.WriteLine(x1++ - --x0);// 4 - 2
+
+            eval+=6;
+            eval -= 5;
+            eval *= 4;
+            eval /= 4;
+
+            //for: cuando sabemos cuantas veces iterar
+            for (int i = 1;i <= 10;i++) {
+                Console.WriteLine("Estoy dentro del for " + i);
+                i++;
+            }
+            Console.WriteLine("Ya acabó el for");
             #endregion
 
         }
