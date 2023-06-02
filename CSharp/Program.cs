@@ -143,10 +143,80 @@ namespace zona_principal
 
             //for: cuando sabemos cuantas veces iterar
             for (int i = 1;i <= 10;i++) {
+                if (i == 4)
+                    break;
+
                 Console.WriteLine("Estoy dentro del for " + i);
-                i++;
+                
             }
             Console.WriteLine("Ya acabó el for");
+            #endregion
+
+            #region Condicionales
+            // < > <= >= == != .equals()
+            // 
+            Console.WriteLine("Iniciando IF");
+            int y1=3, y2 = 5;
+
+            if (y1 > y2) 
+                Console.WriteLine("y1 es mayor a y2");
+            else 
+                Console.WriteLine("y1 NO es mayor a y2");
+            
+
+            Console.WriteLine("Continúa luego del IF");
+
+            Console.WriteLine("Ingrese un numero de día (1: Lunes, 2: Martes, ... 7: Domingo)");
+            int dia = int.Parse(Console.ReadLine());// 1: Lunes, 2: Martes, ... 7: Domingo
+            if(dia == 1)
+                Console.WriteLine("Lunes");
+            else
+                if(dia == 2)
+                    Console.WriteLine("Martes");
+                else
+                    if(dia == 3)
+                        Console.WriteLine("Miercoles");
+                    else
+                        if(dia == 4)
+                            Console.WriteLine("Jueves");
+                        else
+                            if(dia == 5)
+                                Console.WriteLine("Viernes");
+                            else
+                                if(dia == 6)
+                                    Console.WriteLine("Sabado");
+                                else
+                                    if(dia == 7)
+                                        Console.WriteLine("Domingo");
+                                    else
+                                        Console.WriteLine("No es un número de día.");
+
+            switch (dia) {
+                case 1:
+                    Console.WriteLine("Lunes");
+                    break;
+                case 2:
+                    Console.WriteLine("Martes");
+                    break;
+                case 3:
+                    Console.WriteLine("Miercoles");
+                    break;
+                case 4:
+                    Console.WriteLine("Jueves");
+                    break;
+                case 5:
+                    Console.WriteLine("Viernes");
+                    break;
+                case 6:
+                case 7:
+                    Console.WriteLine("Fin de semana");
+                    break;
+               
+                default:
+                    Console.WriteLine("No es un número de día.");
+                    break;
+            }
+
             #endregion
 
         }
