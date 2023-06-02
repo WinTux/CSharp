@@ -1,4 +1,5 @@
 ﻿using Algebraicas.Matriciales;
+using CSharp;
 using Trigonometricas;
 
 namespace zona_principal
@@ -217,6 +218,15 @@ namespace zona_principal
                     break;
             }
 
+            #endregion
+
+            #region OOP
+            FiguraGeometrica fg1 = new FiguraGeometrica();
+
+            FiguraGeometrica fg2 = new FiguraGeometrica("Circulo", 67f);
+            fg1.nombre = "Cuadrado";
+            fg1.area = -45.5f;
+            Console.WriteLine($"La figura geométrica {fg1.nombre} tiene como área {fg1.area}[cm^2].");
             #endregion
 
         }
