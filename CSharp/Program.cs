@@ -1,6 +1,5 @@
 ﻿using Algebraicas.Matriciales;
 using CSharp;
-using Trigonometricas;
 
 namespace zona_principal
 {
@@ -64,7 +63,7 @@ namespace zona_principal
 
             #region Otros ejemplos
             //usando clases propias
-            Circulo c;
+            //Circulo c;
             MatrizPerspectiva matriz1;
 
             Algebraicas.Sumatorias sum;
@@ -224,9 +223,33 @@ namespace zona_principal
             FiguraGeometrica fg1 = new FiguraGeometrica();
 
             FiguraGeometrica fg2 = new FiguraGeometrica("Circulo", 67f);
-            fg1.nombre = "Cuadrado";
-            fg1.area = -45.5f;
-            Console.WriteLine($"La figura geométrica {fg1.nombre} tiene como área {fg1.area}[cm^2].");
+            fg1.Nombre = "Cuadrado";
+            fg1.Area = -45.5f;
+            Console.WriteLine($"La figura geométrica {fg1.Nombre} tiene como área {fg1.Area}[cm^2].");
+
+            Cuadrado c1 = new Cuadrado();
+            Console.WriteLine($"La figura geométrica {c1.Nombre} tiene como área {c1.Area}[cm^2].");
+
+            Cuadrado c2 = new Cuadrado(12, 10);
+            Console.WriteLine($"La figura geométrica {c2.Nombre} tiene como área {c2.Area}[cm^2].");
+
+            Circulo cir1 = new Circulo(5, -1, 4);
+            Console.WriteLine($"La figura geométrica {cir1.Nombre} tiene como área {cir1.Area}[cm^2].");
+
+            FiguraGeometrica[] figuras = new FiguraGeometrica[3];
+            figuras[0] = c1;
+            figuras[1] = cir1;
+            figuras[2] = c2;
+            for(int i = 0; i < figuras.Length;i++)
+                Console.WriteLine($"Elemento {i}: {figuras[i].Nombre} tiene como área {figuras[i].Area}[cm^2].");
+
+            FiguraGeometrica fg3 = new Cuadrado();
+            FiguraGeometrica fg4 = new Circulo();
+
+            //Error
+            //Cuadrado c3 = new FiguraGeometrica();
+            //Circulo cir2 = new FiguraGeometrica();
+
             #endregion
 
         }
@@ -249,7 +272,7 @@ namespace otro
 
     public class una_clase
     {
-        Circulo circulo2;
+        //Circulo circulo2;
         string nn;
         int y = 9;
         public void met(int nit) {
